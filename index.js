@@ -29,7 +29,7 @@ app.use("/api/v1/product", ProductRouter);
 const startServer = async () => {
     try{
        const PORT = process.env.PORT || 9000;
-       const DB_URL = process.env.DB_URL || 'mongodb+srv://vktdev:VKTDBuser667@easybookapiv1.f86n2en.mongodb.net/test_db'
+       const DB_URL = process.env.DB_URL;
 
        await connectToDatabase(DB_URL);
        app.listen(PORT, () => {
